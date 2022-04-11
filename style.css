@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  /*<<< FONTS */
+  --icp-ff-primary: "Anek Tamil", sans-serif;
+
+  /*<<< SHADOWS */
+  --icp-shdw-1: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --icp-shdw-2: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --icp-shdw-3: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+  /*<<< TRANSITIONS */
+  --icp-transit-1: all 0.5s ease;
+  --icp-transit-2: all 0.3s ease;
+
+  /*<<<   COLORS */
+  --icp-clr-white: rgba(250, 250, 250, 1);
+  --icp-clr-black: rgb(27, 27, 27);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--icp-ff-primary);
+}
+
+body {
+  transition: var(--icp-transit-2);
+  scroll-behavior: smooth;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 2fr 1fr;
+}
+
+img {
+  height: 40%;
+}
+
+/*<<<------- NAV BAR -------*/
+.nav-center {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--icp-clr-white);
+  padding: 0.5rem;
+  font-weight: 200;
+  box-shadow: var(--icp-shdw-2);
+  height: 3rem;
+}
+
+/*<<<------- MAIN -------*/
+.mainHeader {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container {
+  background-color: var(--icp-clr-black);
+  width: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mainTxt {
+  padding: 0.2rem 0;
+  text-transform: uppercase;
+  color: var(--icp-clr-white);
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  padding: 0 1.5rem;
+  text-align: start;
+}
+
+.txtOne {
+  padding-right: 1em;
+  text-align: right;
+}
+
+.color {
+  color: var(--icp-clr-white);
+  text-align: left;
+}
+
+/*<<<------- BUTTONS -------*/
+
+.heroSection {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.bntContainer {
+  display: felx;
+}
+
+.btnHero {
+  border: 2px solid var(--icp-clr-black);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  background-color: transparent;
+  font-size: 1rem;
+  box-shadow: var(--icp-shdw-3);
+}
+
+.btnOne {
+  grid-column: 1 / 2;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 0.2rem;
+  padding: 0.3rem 1rem;
+}
+
+.btnTwo {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 0.2rem;
+  padding: 0.3rem 1rem;
+}
+
+.btnHero:hover {
+  background-color: var(--icp-clr-black);
+  color: var(--icp-clr-white);
+  letter-spacing: 0.2em;
+}
+
+/*<<<------- MSG -------*/
+
+.msgContainer {
+  grid-column: 1 / 4;
+  grid-row: 4 / 5;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+/*<<<------- FOOTER -------*/
+
+footer {
+  grid-column: 1 / 4;
+  grid-row: 5 / 6;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+/*<<<------- QUERIES-------*/
+
+@media (min-width: 450px) {
+  .mainTxt {
+    padding: 0.2rem 0;
+    text-transform: uppercase;
+    color: var(--icp-clr-white);
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    padding: 0 1.5rem;
+    text-align: start;
+  }
+
+  .txtOne {
+    padding-right: 1em;
+    text-align: right;
+  }
+
+  .color {
+    color: var(--icp-clr-white);
+    text-align: center;
+  }
+}
+@media (min-width: 0px) {
+  .container {
+    background-color: var(--icp-clr-black);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainTxt {
+    padding: 0.2rem 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .txtOne {
+    text-align: center;
+  }
+  .txtTwo {
+    text-align: center;
+  }
+
+  .color {
+    text-align: center;
+  }
+}
