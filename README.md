@@ -10,3 +10,5 @@ Use the "click me" button to generate a random #hex.
 The site's background color will update with the color generated.
 If you like the color just click "copy me" to save it to your clipoard.
 And there you go, you gotz inspired like crazy and are ready to create!
+
+# ![alt text](https://ibb.co/GFqN0Yc "Image of the site") Inspiring Colors
