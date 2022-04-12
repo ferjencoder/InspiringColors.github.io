@@ -1,7 +1,9 @@
+//<<<------ HEX GENERATOR ------------------------------------------------------
 const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
-const colorReply = document.querySelector(".color-reply");
+const happyIcon = document.querySelector(".happyIcon");
+const colorReply = document.querySelector(".msg-reply");
 
 btn.addEventListener("click", function () {
   colorReply.textContent = "";
@@ -12,6 +14,7 @@ btn.addEventListener("click", function () {
 
   color.textContent = hexColor;
   color.style.color = hexColor;
+  happyIcon.className = "d-none";
   document.body.style.backgroundColor = hexColor;
 });
 
@@ -19,10 +22,14 @@ function getRandomNumber() {
   return Math.floor(Math.random() * hex.length);
 }
 
+//<<<------ MSG ----------------------------------------------------------------
 const btnCopy = document.getElementById("btnCopy");
 const webColor = document.querySelector(".color");
+const webHappyIcon = document.querySelector(".happyIcon");
 
 btnCopy.addEventListener("click", function () {
   navigator.clipboard.writeText(color.textContent);
   colorReply.textContent = color.textContent + " copied to cloipboard!";
+  webHappyIcon.style = "--fa-animation-iteration-count: 3";
+  webHappyIcon.className = "fa-solid fa-frog fa-bounce fa-2xl";
 });

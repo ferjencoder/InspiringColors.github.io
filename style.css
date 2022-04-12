@@ -1,219 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100;200;300;400;500;600;700;800&display=swap");
 
 :root {
-  /*<<< FONTS */
+  /*<<<------------ FONTS --------------------*/
   --icp-ff-primary: "Anek Tamil", sans-serif;
 
-  /*<<< SHADOWS */
+  /*<<<------------ SHADOWS --------------------*/
   --icp-shdw-1: 0 5px 15px rgba(0, 0, 0, 0.2);
   --icp-shdw-2: 0 5px 15px rgba(0, 0, 0, 0.1);
   --icp-shdw-3: 0 5px 10px rgba(0, 0, 0, 0.05);
 
-  /*<<< TRANSITIONS */
+  /*<<<------------ TRANSITIONS --------------------*/
   --icp-transit-1: all 0.5s ease;
   --icp-transit-2: all 0.3s ease;
 
-  /*<<<   COLORS */
-  --icp-clr-white: rgba(250, 250, 250, 1);
+  /*<<<------------   COLORS --------------------*/
+  --icp-clr-white: white;
   --icp-clr-black: rgb(27, 27, 27);
+
+  /*<<<------------   SPACING --------------------*/
+  --icp-spacing-1: 0.2em;
+  --icp-spacing-2: 0.3em;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
   font-family: var(--icp-ff-primary);
-}
-
-body {
-  transition: var(--icp-transit-2);
   scroll-behavior: smooth;
-  margin-left: auto;
-  margin-right: auto;
+  transition: var(--icp-transit-2);
 }
 
+/*<<<<------------ GRID --------------------*/
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 5fr 2fr 1fr;
+  grid-template-areas:
+    "nav-center"
+    "mainHeader"
+    "heroSection heroSection"
+    "msgContainer";
 }
 
-img {
-  height: 40%;
-}
+/*<<<<------------ NAV BAR --------------------*/
 
-/*<<<------- NAV BAR -------*/
 .nav-center {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  height: 4rem;
   background-color: var(--icp-clr-white);
-  padding: 0.5rem;
-  font-weight: 200;
   box-shadow: var(--icp-shdw-2);
-  height: 3rem;
+  text-transform: uppercase;
+  padding-left: 0.5em;
 }
 
-/*<<<------- MAIN -------*/
+/*<<<<------------ HEADER --------------------*/
+
 .mainHeader {
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
-  top: 50%;
-  width: 100%;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+  height: 20rem;
+  letter-spacing: var(--icp-spacing-1);
+  font-weight: 100;
+  color: var(--icp-clr-black);
+}
+
+.happyIcon {
+  margin-bottom: -30em;
+}
+.d-none {
+  display: none;
+}
+.mainTxt {
+  font-size: 2.5rem;
 }
 
 .container {
-  background-color: var(--icp-clr-black);
   width: 100%;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.mainTxt {
-  padding: 0.2rem 0;
-  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--icp-clr-black);
   color: var(--icp-clr-white);
-  font-size: 3rem;
-  letter-spacing: 0.2rem;
-  font-weight: 600;
-  padding: 0 1.5rem;
-  text-align: start;
+  padding: 1em 0.2em;
 }
 
-.txtOne {
-  padding-right: 1em;
-  text-align: right;
-}
-
-.color {
-  color: var(--icp-clr-white);
-  text-align: left;
-}
-
-/*<<<------- BUTTONS -------*/
-
+/*<<<<------------ HERO SECTION --------------------*/
 .heroSection {
-  grid-column: 1 / 4;
-  grid-row: 3 / 4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.bntContainer {
-  display: felx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
 }
 
 .btnHero {
-  border: 2px solid var(--icp-clr-black);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   background-color: transparent;
+  border: 2px solid var(--icp-clr-black);
   font-size: 1rem;
-  box-shadow: var(--icp-shdw-3);
+  font-weight: 700;
+  letter-spacing: var(--icp-spacing-1);
+}
+.btnHero:hover {
+  background-color: var(--icp-clr-black);
+  letter-spacing: var(--icp-spacing-2);
+  color: var(--icp-clr-white);
+  transition: var(--icp-transit-2);
 }
 
 .btnOne {
-  grid-column: 1 / 2;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 0.2rem;
-  padding: 0.3rem 1rem;
+  padding: 0.3em 1.2em;
+  margin-right: 0.7rem;
 }
-
 .btnTwo {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 0.2rem;
-  padding: 0.3rem 1rem;
+  padding: 0.3em 1.2em;
+  margin-left: 0.7rem;
 }
 
-.btnHero:hover {
-  background-color: var(--icp-clr-black);
-  color: var(--icp-clr-white);
-  letter-spacing: 0.2em;
-}
-
-/*<<<------- MSG -------*/
+/*<<<<------------ MSG CONTAINER --------------------*/
 
 .msgContainer {
-  grid-column: 1 / 4;
-  grid-row: 4 / 5;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 200;
-}
-
-/*<<<------- FOOTER -------*/
-
-footer {
-  grid-column: 1 / 4;
-  grid-row: 5 / 6;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  padding-left: 1rem;
-  font-size: 1rem;
-}
-
-/*<<<------- QUERIES-------*/
-
-@media (min-width: 450px) {
-  .mainTxt {
-    padding: 0.2rem 0;
-    text-transform: uppercase;
-    color: var(--icp-clr-white);
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    padding: 0 1.5rem;
-    text-align: start;
-  }
-
-  .txtOne {
-    padding-right: 1em;
-    text-align: right;
-  }
-
-  .color {
-    color: var(--icp-clr-white);
-    text-align: center;
-  }
-}
-@media (min-width: 0px) {
-  .container {
-    background-color: var(--icp-clr-black);
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mainTxt {
-    padding: 0.2rem 0;
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    text-align: center;
-  }
-
-  .txtOne {
-    text-align: center;
-  }
-  .txtTwo {
-    text-align: center;
-  }
-
-  .color {
-    text-align: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  height: 4rem;
+  font-size: 1.2rem;
 }
