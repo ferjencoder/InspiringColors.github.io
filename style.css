@@ -26,6 +26,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-collapse: collapse;
 }
 
 html {
@@ -70,9 +71,14 @@ html {
   color: var(--icp-clr-black);
 }
 
-.happyIcon {
-  margin-bottom: -30em;
+.happyIconContainer {
+  margin-bottom: -1.2em;
 }
+
+.happyIconSize {
+  font-size: 70px;
+}
+
 .d-none {
   display: none;
 }

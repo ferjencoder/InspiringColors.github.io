@@ -31,5 +31,5 @@ btnCopy.addEventListener("click", function () {
   navigator.clipboard.writeText(color.textContent);
   colorReply.textContent = color.textContent + " copied to cloipboard!";
   webHappyIcon.style = "--fa-animation-iteration-count: 3";
-  webHappyIcon.className = "fa-solid fa-frog fa-bounce fa-2xl";
+  webHappyIcon.className = "fa-brands fa-android fa-bounce happyIconSize";
 });
