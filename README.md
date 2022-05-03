@@ -1,8 +1,8 @@
 # ![alt text](https://i.ibb.co/kBz1k1Q/imgIC.png "Funky spray can logo") Inspiring Colors
 
-https://ferjencoder.github.io/InspiringColors.github.io/
-
 Simple website to help peeps get color inspired 🤸‍♀️.
+
+https://ferjencoder.github.io/InspiringColors.github.io/
 
 Currently, this js scripted random color generator only offers #hex combinations but eventually I'll add other color type options.
 
