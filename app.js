@@ -24,7 +24,6 @@ function getRandomNumber() {
 
 //<<<------ MSG ----------------------------------------------------------------
 const btnCopy = document.getElementById("btnCopy");
-const webColor = document.querySelector(".color");
 const webHappyIcon = document.querySelector(".happyIcon");
 
 btnCopy.addEventListener("click", function () {
