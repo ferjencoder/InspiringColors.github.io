@@ -29,7 +29,7 @@ const webHappyIcon = document.querySelector(".happyIcon");
 
 btnCopy.addEventListener("click", function () {
   navigator.clipboard.writeText(color.textContent);
-  colorReply.textContent = color.textContent + " copied to cloipboard!";
+  colorReply.textContent = color.textContent + " copied to clipboard!";
   webHappyIcon.style = "--fa-animation-iteration-count: 3";
   webHappyIcon.className = "fa-brands fa-android fa-bounce happyIconSize";
 });
